@@ -1,0 +1,53 @@
+import jwt, { SignOptions } from "jsonwebtoken";
+import bcrypt from "bcryptjs";
+import { NextRequest } from "next/server";
+
+const JWT_SECRET = process.env.JWT_SECRET || "nagpurnest-dev-secret";
+const JWT_EXPIRES_IN = (process.env.JWT_EXPIRES_IN ||
+  "7d") as SignOptions["expiresIn"];
+
+export interface JWTPayload {
+  userId: string;
+  email: string;
+  role: "customer" | "provider" | "admin";
+}
+
+export function signToken(payload: JWTPayload): string {
+  return jwt.sign(payload, JWT_SECRET as jwt.Secret, {
+    expiresIn: JWT_EXPIRES_IN,
+  });
+}
+
+export function verifyToken(token: string): JWTPayload {
+  return jwt.verify(token, JWT_SECRET as jwt.Secret) as JWTPayload;
+}
+
+export async function hashPassword(password: string): Promise<string> {
+  return bcrypt.hash(password, 12);
+}
+
+export async function comparePassword(
+  password: string,
+  hash: string,
+): Promise<boolean> {
+  return bcrypt.compare(password, hash);
+}
+
+export function getTokenFromRequest(req: NextRequest): string | null {
+  const authHeader = req.headers.get("authorization");
+  if (authHeader?.startsWith("Bearer ")) {
+    return authHeader.slice(7);
+  }
+  const cookie = req.cookies.get("token")?.value;
+  return cookie || null;
+}
+
+export function getUserFromRequest(req: NextRequest): JWTPayload | null {
+  try {
+    const token = getTokenFromRequest(req);
+    if (!token) return null;
+    return verifyToken(token);
+  } catch {
+    return null;
+  }
+}
