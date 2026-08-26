@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Area } from "@/types";
 
+import { dbConnect } from "@/lib/db";
+import { Area as AreaModel } from "@/models/Area";
+
 async function getAreas(): Promise<Area[]> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/areas`, {
-      cache: "no-store",
-    });
-    if (!res.ok) return [];
-    const data = await res.json();
-    return data.data || [];
+    await dbConnect();
+    const areas = await AreaModel.find({}).sort({ name: 1 }).lean();
+    return JSON.parse(JSON.stringify(areas));
   } catch {
     return [];
   }

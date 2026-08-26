@@ -15,14 +15,40 @@ import { MapPin, Truck, CheckCircle2, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
+import { dbConnect } from "@/lib/db";
+import { TiffinListing as TiffinModel } from "@/models/TiffinListing";
+import { User as UserModel } from "@/models/User";
+import { ProviderProfile as ProviderProfileModel } from "@/models/ProviderProfile";
+import { Review as ReviewModel } from "@/models/Review";
+
 async function getTiffin(slug: string) {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/tiffins/${slug}`, {
-      cache: "no-store",
-    });
-    if (!res.ok) return null;
-    return res.json();
-  } catch { return null; }
+    await dbConnect();
+    const listing = await TiffinModel.findOne({ slug, status: "active" }).lean();
+    if (!listing) return null;
+
+    const providerUser = await UserModel.findById((listing as any).providerId).select("name email phone").lean();
+    const providerProfile = await ProviderProfileModel.findOne({ userId: (listing as any).providerId }).lean();
+    const reviews = await ReviewModel.find({ listingId: (listing as any)._id, isApproved: true })
+      .populate("userId", "name avatar")
+      .sort({ createdAt: -1 })
+      .lean();
+
+    return {
+      listing: {
+        ...JSON.parse(JSON.stringify(listing)),
+        provider: {
+          name: (providerUser as any)?.name || "Provider",
+          phone: (providerProfile as any)?.phone || (providerUser as any)?.phone || "",
+          whatsapp: (providerProfile as any)?.whatsapp || (providerProfile as any)?.phone || (providerUser as any)?.phone || "",
+          isVerified: (providerProfile as any)?.isVerified || false,
+        },
+      },
+      reviews: JSON.parse(JSON.stringify(reviews)),
+    };
+  } catch {
+    return null;
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

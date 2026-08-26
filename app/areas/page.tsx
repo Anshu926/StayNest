@@ -10,11 +10,14 @@ export const metadata: Metadata = {
   description: "Discover the best areas and neighbourhoods in Nagpur for students and working professionals. Find PGs, rooms and tiffins by area.",
 };
 
+import { dbConnect } from "@/lib/db";
+import { Area as AreaModel } from "@/models/Area";
+
 async function getAreas(): Promise<Area[]> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/areas`, { next: { revalidate: 3600 } });
-    if (!res.ok) return [];
-    return (await res.json()).data || [];
+    await dbConnect();
+    const areas = await AreaModel.find({}).sort({ name: 1 }).lean();
+    return JSON.parse(JSON.stringify(areas));
   } catch { return []; }
 }
 

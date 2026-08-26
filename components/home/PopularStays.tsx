@@ -2,15 +2,17 @@ import Link from "next/link";
 import { StayListing } from "@/types";
 import ListingCard from "@/components/listings/ListingCard";
 
+import { dbConnect } from "@/lib/db";
+import { StayListing as StayModel } from "@/models/StayListing";
+
 async function getPopularStays(): Promise<StayListing[]> {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_APP_URL}/api/stays?limit=6&sort=rating`,
-      { next: { revalidate: 1800 } }
-    );
-    if (!res.ok) return [];
-    const data = await res.json();
-    return data.data || [];
+    await dbConnect();
+    const stays = await StayModel.find({ status: "active", isAvailable: true })
+      .sort({ avgRating: -1, totalReviews: -1 })
+      .limit(6)
+      .lean();
+    return JSON.parse(JSON.stringify(stays));
   } catch {
     return [];
   }

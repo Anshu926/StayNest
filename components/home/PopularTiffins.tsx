@@ -2,15 +2,17 @@ import Link from "next/link";
 import { TiffinListing } from "@/types";
 import TiffinCard from "@/components/listings/TiffinCard";
 
+import { dbConnect } from "@/lib/db";
+import { TiffinListing as TiffinModel } from "@/models/TiffinListing";
+
 async function getPopularTiffins(): Promise<TiffinListing[]> {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_APP_URL}/api/tiffins?limit=6&sort=rating`,
-      { next: { revalidate: 1800 } }
-    );
-    if (!res.ok) return [];
-    const data = await res.json();
-    return data.data || [];
+    await dbConnect();
+    const tiffins = await TiffinModel.find({ status: "active" })
+      .sort({ avgRating: -1, totalReviews: -1 })
+      .limit(6)
+      .lean();
+    return JSON.parse(JSON.stringify(tiffins));
   } catch {
     return [];
   }

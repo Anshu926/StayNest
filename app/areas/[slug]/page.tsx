@@ -15,14 +15,27 @@ type AreaDetailData = {
   tiffins: TiffinListing[];
 };
 
+import { dbConnect } from "@/lib/db";
+import { Area as AreaModel } from "@/models/Area";
+import { StayListing as StayModel } from "@/models/StayListing";
+import { TiffinListing as TiffinModel } from "@/models/TiffinListing";
+
 async function getArea(slug: string): Promise<AreaDetailData | null> {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_APP_URL}/api/areas/${slug}`,
-      { next: { revalidate: 900 } },
-    );
-    if (!res.ok) return null;
-    return (await res.json()) as AreaDetailData;
+    await dbConnect();
+    const area = await AreaModel.findOne({ slug }).lean();
+    if (!area) return null;
+
+    const [stays, tiffins] = await Promise.all([
+      StayModel.find({ areaSlug: slug, status: "active" }).sort({ avgRating: -1 }).lean(),
+      TiffinModel.find({ areaSlug: slug, status: "active" }).sort({ avgRating: -1 }).lean(),
+    ]);
+
+    return {
+      area: JSON.parse(JSON.stringify(area)),
+      stays: JSON.parse(JSON.stringify(stays)),
+      tiffins: JSON.parse(JSON.stringify(tiffins)),
+    };
   } catch {
     return null;
   }
