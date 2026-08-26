@@ -31,7 +31,7 @@ export default function WhatsAppButton({ whatsapp, listingName, providerId }: Wh
 
   return (
     <a
-      href={`https://wa.me/91${whatsapp}?text=Hi, I saw your listing "${listingName}" on NagpurNest and I'm interested.`}
+      href={`https://wa.me/91${whatsapp}?text=Hi, I saw your listing "${listingName}" on StayNest and I'm interested.`}
       target="_blank"
       rel="noopener noreferrer"
       className="mt-3 flex items-center justify-center gap-2 w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors text-sm shadow-sm"

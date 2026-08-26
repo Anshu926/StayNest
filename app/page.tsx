@@ -10,9 +10,9 @@ import ListYourService from "@/components/home/ListYourService";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NagpurNest — Find PGs, Rooms & Tiffin in Nagpur",
+  title: "StayNest — Accommodation and Meal Booking Platform",
   description:
-    "Your first step after moving to Nagpur. Find trusted PGs, rental rooms, flats and tiffin services across Nagpur. Perfect for students and corporate employees.",
+    "Find trusted PGs, rental rooms, flats, and home-cooked meal services. Perfect for students and working professionals.",
 };
 
 export default function HomePage() {

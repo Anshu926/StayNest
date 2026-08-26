@@ -64,11 +64,11 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-primary-200/60 dark:border-primary-900/60 text-primary-700 dark:text-primary-400 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-primary-500 animate-ping" />
             <MapPin className="w-3.5 h-3.5 text-primary-500" />
-            Nagpur's #1 Newcomer Platform
+            Accommodation and Meal Booking Platform
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-5 tracking-tight leading-[1.15]">
-            New to Nagpur?
+            New to the City?
           </h1>
 
           <p className="text-xl sm:text-2xl text-gray-700 dark:text-slate-200 font-medium mb-3">
@@ -79,7 +79,7 @@ export default function HeroSection() {
           </p>
 
           <p className="text-sm sm:text-base text-gray-500 dark:text-slate-400 max-w-xl mx-auto">
-            Discover verified PGs, rooms, flats, and homemade tiffin services across Nagpur — crafted for students and working professionals.
+            Discover verified PGs, rooms, flats, and home-cooked meal services — crafted for students and working professionals.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export default function HeroSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-4">
                 <div>
                   <label className="block text-xs font-semibold text-gray-600 dark:text-slate-400 mb-1.5">
-                    Area in Nagpur
+                    Select Area / Locality
                   </label>
                   <select
                     className="input-field"
@@ -196,7 +196,7 @@ export default function HeroSection() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-4">
                 <div>
                   <label className="block text-xs font-semibold text-gray-600 dark:text-slate-400 mb-1.5">
-                    Area in Nagpur
+                    Select Area / Locality
                   </label>
                   <select
                     className="input-field"

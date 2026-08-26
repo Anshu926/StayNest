@@ -6,7 +6,7 @@ import { Area } from "@/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Explore Areas in Nagpur | NagpurNest",
+  title: "Explore Areas in Nagpur | StayNest",
   description: "Discover the best areas and neighbourhoods in Nagpur for students and working professionals. Find PGs, rooms and tiffins by area.",
 };
 
@@ -34,7 +34,7 @@ export default async function AreasPage() {
             🗺️ City Localities
           </div>
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight">
-            Explore Nagpur's Neighbourhoods
+            Explore Top Neighbourhoods & Areas
           </h1>
           <p className="text-sm sm:text-base text-gray-500 dark:text-slate-400 max-w-xl mx-auto">
             Find the right area for your lifestyle — whether you are looking for student budget hubs, IT corridors near MIHAN, or vibrant central localities.

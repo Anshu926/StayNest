@@ -573,7 +573,7 @@ export default function ProviderDashboardPage() {
                         inq.name
                       )}, thank you for inquiring about "${encodeURIComponent(
                         inq.listing?.name || "our property"
-                      )}" on NagpurNest...`;
+                      )}" on StayNest...`;
 
                       return (
                         <div

@@ -16,23 +16,24 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: {
-    default: "NagpurNest — Find PGs, Rooms & Tiffin in Nagpur",
-    template: "%s | NagpurNest",
+    default: "StayNest — Accommodation and Meal Booking Platform",
+    template: "%s | StayNest",
   },
   description:
-    "NagpurNest helps newcomers in Nagpur find trusted PGs, rental rooms, flats, and tiffin services. Everything you need to settle into Nagpur.",
+    "StayNest is your trusted accommodation and meal booking platform. Discover verified PGs, rental rooms, flats, and home-cooked meal services effortlessly.",
   keywords: [
-    "PG in Nagpur",
-    "rooms for rent Nagpur",
-    "tiffin service Nagpur",
-    "accommodation Nagpur",
-    "flat for rent Nagpur",
-    "hostel Nagpur",
-    "newcomers Nagpur",
+    "PG booking",
+    "rooms for rent",
+    "tiffin service",
+    "accommodation booking platform",
+    "rental flats",
+    "student hostels",
+    "daily meals",
+    "StayNest",
   ],
   openGraph: {
-    title: "NagpurNest — Find PGs, Rooms & Tiffin in Nagpur",
-    description: "Everything you need to settle into Nagpur.",
+    title: "StayNest — Accommodation and Meal Booking Platform",
+    description: "Discover verified PGs, rental rooms, flats, and home-cooked meal services effortlessly.",
     type: "website",
     locale: "en_IN",
   },
@@ -56,7 +57,7 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
-                  var saved = localStorage.getItem('nagpurnest-theme');
+                  var saved = localStorage.getItem('staynest-theme');
                   var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                   if (saved === 'dark' || (!saved && prefersDark)) {
                     document.documentElement.classList.add('dark');

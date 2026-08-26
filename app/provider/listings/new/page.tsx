@@ -365,7 +365,7 @@ function NewListingPageContent() {
                   />
                 </div>
 
-                {/* Area in Nagpur */}
+                {/* Select Area / Locality */}
                 <div>
                   <label className="block text-xs font-semibold text-gray-700 mb-1.5">
                     Nagpur Locality / Area <span className="text-red-500">*</span>
@@ -656,7 +656,7 @@ function NewListingPageContent() {
                     Publishing Listing...
                   </>
                 ) : (
-                  <>Publish Listing to NagpurNest</>
+                  <>Publish Listing to StayNest</>
                 )}
               </button>
 

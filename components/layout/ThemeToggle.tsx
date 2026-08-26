@@ -9,7 +9,7 @@ export default function ThemeToggle({ className }: { className?: string }) {
 
   const syncThemeState = useCallback(() => {
     try {
-      const savedTheme = localStorage.getItem("nagpurnest-theme");
+      const savedTheme = localStorage.getItem("staynest-theme");
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const currentDark = savedTheme ? savedTheme === "dark" : prefersDark;
 
@@ -44,10 +44,10 @@ export default function ThemeToggle({ className }: { className?: string }) {
 
     if (nextDark) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("nagpurnest-theme", "dark");
+      localStorage.setItem("staynest-theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("nagpurnest-theme", "light");
+      localStorage.setItem("staynest-theme", "light");
     }
 
     window.dispatchEvent(new Event("theme-change"));

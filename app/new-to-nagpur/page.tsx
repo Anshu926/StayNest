@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "New to Nagpur? Your Complete Guide | NagpurNest",
+  title: "New to the City? Your Complete Guide | StayNest",
   description: "A complete guide for newcomers in Nagpur — find accommodation, home food, explore areas, and discover everything you need to settle in faster.",
 };
 
@@ -71,10 +71,10 @@ export default function NewToNagpurPage() {
             ✨ Complete Relocation Handbook
           </div>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold mb-5 tracking-tight">
-            New to Nagpur?
+            New to the City?
           </h1>
           <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-            Moving to a new city shouldn't be overwhelming. NagpurNest is your comprehensive local companion for finding verified stays, wholesome food, and settling in with confidence.
+            Moving to a new city shouldn't be overwhelming. StayNest is your comprehensive local companion for finding verified stays, wholesome food, and settling in with confidence.
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
             <Link href="/stays" className="btn-primary px-6 py-3 font-semibold">

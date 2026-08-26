@@ -31,7 +31,7 @@ export default async function PopularStays() {
             <div className="section-badge bg-primary-50 dark:bg-primary-950/60 border border-primary-200/80 dark:border-primary-900/60 text-primary-700 dark:text-primary-400">
               🏠 Verified Stays
             </div>
-            <h2 className="section-title">Popular Stays in Nagpur</h2>
+            <h2 className="section-title">Popular Verified Stays</h2>
             <p className="text-sm sm:text-base text-gray-500 dark:text-slate-400 mt-1.5">
               Top-rated PGs, shared rooms, and private flats verified for students and working professionals.
             </p>

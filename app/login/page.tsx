@@ -95,7 +95,7 @@ export default function LoginPage() {
                 Welcome Back
               </h1>
               <p className="text-sm text-gray-500 dark:text-slate-400">
-                Sign in to your NagpurNest account
+                Sign in to your StayNest account
               </p>
             </div>
 

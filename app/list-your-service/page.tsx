@@ -5,8 +5,8 @@ import { Building2, UtensilsCrossed, Home, Bed, ChevronRight } from "lucide-reac
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "List Your PG, Room or Tiffin Service | NagpurNest",
-  description: "List your PG, flat, hostel or tiffin service on NagpurNest and connect with thousands of newcomers in Nagpur looking for accommodation and home food.",
+  title: "List Your PG, Room or Tiffin Service | StayNest",
+  description: "List your PG, flat, hostel or tiffin service on StayNest and connect with thousands of newcomers in Nagpur looking for accommodation and home food.",
 };
 
 const listingTypes = [
@@ -23,7 +23,7 @@ export default function ListYourServicePage() {
 
       <div className="bg-gradient-to-br from-warm-50 to-white dark:from-slate-900 dark:to-slate-950 py-14 px-4 text-center border-b border-gray-100 dark:border-slate-800/60 transition-colors">
         <h1 className="font-heading text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          List Your Service on NagpurNest
+          List Your Service on StayNest
         </h1>
         <p className="text-gray-600 dark:text-slate-400 text-base sm:text-lg max-w-xl mx-auto">
           Reach thousands of newcomers in Nagpur who are actively looking for accommodation and home food. It's free to get started.
@@ -56,7 +56,7 @@ export default function ListYourServicePage() {
 
           {/* Benefits */}
           <div className="bg-secondary-50 dark:bg-slate-900 rounded-3xl p-8 border border-secondary-100 dark:border-slate-800 shadow-sm transition-colors">
-            <h3 className="font-heading text-xl font-bold text-gray-900 dark:text-white mb-5 text-center">Why list on NagpurNest?</h3>
+            <h3 className="font-heading text-xl font-bold text-gray-900 dark:text-white mb-5 text-center">Why list on StayNest?</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 { emoji: "🎯", title: "Targeted Audience", desc: "Connect with students, professionals and newcomers who are actively searching." },

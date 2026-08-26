@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/nagpurnest";
+  process.env.MONGODB_URI || "mongodb://localhost:27017/staynest";
 
 // ── Inline schemas (avoid circular import issues in scripts) ───────────────
 const UserSchema = new mongoose.Schema(
@@ -292,9 +292,9 @@ async function seed() {
   await UserModel.deleteMany({
     email: {
       $in: [
-        "demo.provider1@nagpurnest.in",
-        "demo.provider2@nagpurnest.in",
-        "demo.provider3@nagpurnest.in",
+        "demo.provider1@staynest.in",
+        "demo.provider2@staynest.in",
+        "demo.provider3@staynest.in",
       ],
     },
   });
@@ -309,21 +309,21 @@ async function seed() {
   const users = await UserModel.insertMany([
     {
       name: "Ramesh Sharma",
-      email: "demo.provider1@nagpurnest.in",
+      email: "demo.provider1@staynest.in",
       password: hashedPw,
       phone: "9876543210",
       role: "provider",
     },
     {
       name: "Sunita Deshpande",
-      email: "demo.provider2@nagpurnest.in",
+      email: "demo.provider2@staynest.in",
       password: hashedPw,
       phone: "9876543211",
       role: "provider",
     },
     {
       name: "Vijay Tiwari",
-      email: "demo.provider3@nagpurnest.in",
+      email: "demo.provider3@staynest.in",
       password: hashedPw,
       phone: "9876543212",
       role: "provider",
@@ -1231,9 +1231,9 @@ async function seed() {
   ]);
   console.log("✅ Seeded reviews.");
 
-  console.log("\n🎉 Seed complete! NagpurNest demo data is ready.");
+  console.log("\n🎉 Seed complete! StayNest demo data is ready.");
   console.log("\n📝 Demo provider login:");
-  console.log("   Email: demo.provider1@nagpurnest.in");
+  console.log("   Email: demo.provider1@staynest.in");
   console.log("   Password: DemoProvider@123");
   await mongoose.disconnect();
   process.exit(0);

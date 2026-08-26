@@ -50,7 +50,7 @@ export async function generateMetadata({
   const data = await getArea(slug);
   if (!data) return { title: "Area Not Found" };
   return {
-    title: `PGs & Tiffin in ${data.area.name}, Nagpur | NagpurNest`,
+    title: `PGs & Tiffin in ${data.area.name}, Nagpur | StayNest`,
     description: `Find PGs, rooms and tiffin services in ${data.area.name}, Nagpur. ${data.area.description}`,
   };
 }

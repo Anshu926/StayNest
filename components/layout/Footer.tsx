@@ -13,16 +13,16 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-white" strokeWidth={2.5} />
               </div>
               <span className="font-heading text-xl font-bold text-white">
-                Nagpur<span className="text-primary-500">Nest</span>
+                Stay<span className="text-primary-500">Nest</span>
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed mb-5">
-              Everything you need to settle into Nagpur. Discover trusted PGs, shared rooms, flats, and home-cooked tiffins.
+              Find your ideal stay and wholesome daily meals effortlessly. Discover trusted PGs, shared rooms, flats, and home-cooked tiffins.
             </p>
             <div className="flex gap-2.5">
               <span className="inline-flex items-center gap-1 text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-full border border-slate-800">
                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                Live in Nagpur, India
+                Verified Across Top Cities
               </span>
             </div>
           </div>
@@ -34,11 +34,11 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { label: "PGs in Nagpur", href: "/stays?propertyType=pg" },
+                { label: "Verified PGs", href: "/stays?propertyType=pg" },
                 { label: "Single & Shared Rooms", href: "/stays?propertyType=single-room" },
                 { label: "Rental Flats", href: "/stays?propertyType=flat" },
                 { label: "Student Hostels", href: "/stays?propertyType=hostel" },
-                { label: "Daily Tiffin Services", href: "/tiffins" },
+                { label: "Daily Meal & Tiffins", href: "/tiffins" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:text-primary-400 transition-colors">
@@ -92,11 +92,11 @@ export default function Footer() {
             </ul>
             <div>
               <a
-                href="mailto:hello@nagpurnest.in"
+                href="mailto:hello@staynest.in"
                 className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4 text-primary-400" />
-                hello@nagpurnest.in
+                hello@staynest.in
               </a>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-900 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} NagpurNest. Crafted with care for newcomers to Nagpur.
+            © {new Date().getFullYear()} StayNest. Accommodation and Meal Booking Platform.
           </p>
           <div className="flex gap-6 text-xs text-slate-500">
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">

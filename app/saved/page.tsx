@@ -9,7 +9,7 @@ import ListingCard from "@/components/listings/ListingCard";
 import TiffinCard from "@/components/listings/TiffinCard";
 import { StayListing, TiffinListing } from "@/types";
 
-const GUEST_SAVED_KEY = "nagpurnest_guest_saved";
+const GUEST_SAVED_KEY = "staynest_guest_saved";
 
 export default function SavedCollectionPage() {
   const [activeTab, setActiveTab] = useState<"all" | "stays" | "tiffins">("all");

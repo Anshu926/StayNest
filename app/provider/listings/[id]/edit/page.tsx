@@ -415,7 +415,7 @@ export default function EditListingPage() {
                   />
                 </div>
 
-                {/* Area in Nagpur */}
+                {/* Select Area / Locality */}
                 <div>
                   <label className="block text-xs font-semibold text-gray-700 dark:text-slate-300 mb-1.5">
                     Nagpur Locality / Area <span className="text-red-500">*</span>
@@ -707,7 +707,7 @@ export default function EditListingPage() {
               Delete this listing?
             </h3>
             <p className="text-sm text-gray-500 dark:text-slate-400 mb-6 leading-relaxed">
-              Are you sure you want to delete <span className="font-semibold text-gray-900 dark:text-white font-sans">{title}</span>? This action cannot be undone and will immediately remove the listing from NagpurNest.
+              Are you sure you want to delete <span className="font-semibold text-gray-900 dark:text-white font-sans">{title}</span>? This action cannot be undone and will immediately remove the listing from StayNest.
             </p>
             <div className="flex items-center justify-end gap-3">
               <button

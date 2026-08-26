@@ -12,7 +12,7 @@ interface SaveButtonProps {
   size?: "sm" | "md" | "lg";
 }
 
-const GUEST_SAVED_KEY = "nagpurnest_guest_saved";
+const GUEST_SAVED_KEY = "staynest_guest_saved";
 
 export default function SaveButton({
   listingId,

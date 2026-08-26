@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/nagpurnest";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/staynest";
 
 const AreaSchema = new mongoose.Schema({ name: String, slug: String, image: String }, { strict: false });
 const Area = mongoose.models.Area || mongoose.model("Area", AreaSchema);

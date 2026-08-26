@@ -3,7 +3,7 @@ import Link from "next/link";
 const services = [
   { icon: "🏠", title: "Find a Place to Stay", description: "PGs, rooms, flats and hostels across Nagpur", href: "/stays", available: true },
   { icon: "🍱", title: "Find Home Food", description: "Fresh tiffin and home-cooked meal services", href: "/tiffins", available: true },
-  { icon: "🗺️", title: "Explore Nagpur Areas", description: "Discover the best neighbourhoods for you", href: "/areas", available: true },
+  { icon: "🗺️", title: "Explore Localities", description: "Discover the best neighbourhoods for you", href: "/areas", available: true },
   { icon: "🧺", title: "Find Local Services", description: "Maid, cleaning and household services", href: "#", available: false },
   { icon: "🚚", title: "Moving Help", description: "Packers, movers and relocation services", href: "#", available: false },
   { icon: "📶", title: "Internet / Wi-Fi", description: "Broadband providers near you", href: "#", available: false },
@@ -19,9 +19,9 @@ export default function NewToNagpur() {
           <div className="section-badge bg-primary-50 dark:bg-primary-950/60 border border-primary-200/80 dark:border-primary-900/60 text-primary-700 dark:text-primary-400">
             ✨ City Essentials
           </div>
-          <h2 className="section-title mb-2">New to Nagpur?</h2>
+          <h2 className="section-title mb-2">New to the City?</h2>
           <p className="text-sm sm:text-base text-gray-500 dark:text-slate-400 max-w-lg mx-auto">
-            Everything you need to relocate, explore, and settle comfortably in the Orange City.
+            Everything you need to relocate, explore, and settle comfortably in your new city.
           </p>
         </div>
 

@@ -18,7 +18,7 @@ export default function ListYourService() {
               Have a PG, Room,<br />or Tiffin Service?
             </h2>
             <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
-              List your property or food delivery on NagpurNest. Connect directly with students and professionals moving to Nagpur every single day.
+              List your property or food delivery on StayNest. Connect directly with students and professionals moving to Nagpur every single day.
             </p>
             <div className="flex flex-col sm:flex-row gap-3.5">
               <Link

@@ -141,7 +141,7 @@ export default function RegisterPage() {
                 ✨ Get Started Free
               </div>
               <h1 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
-                Join NagpurNest
+                Join StayNest
               </h1>
               <p className="text-sm sm:text-base text-gray-500 dark:text-slate-400">
                 Choose your account type to begin
@@ -229,7 +229,7 @@ export default function RegisterPage() {
               </h1>
               <p className="text-xs sm:text-sm text-gray-500 dark:text-slate-400">
                 {userType === "provider"
-                  ? "Set up your provider account on NagpurNest"
+                  ? "Set up your provider account on StayNest"
                   : "Join the Nagpur community in 60 seconds"}
               </p>
             </div>

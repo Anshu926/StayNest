@@ -12,7 +12,7 @@ interface FavoriteButtonProps {
   size?: "sm" | "md" | "lg";
 }
 
-const GUEST_KEY = "nagpurnest_guest_favorites";
+const GUEST_KEY = "staynest_guest_favorites";
 
 export default function FavoriteButton({
   listingId,

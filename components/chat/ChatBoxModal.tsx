@@ -236,7 +236,7 @@ export default function ChatBoxModal({
   const whatsappUrl =
     customerPhone && customerPhone !== "Customer"
       ? `https://wa.me/91${customerPhone.replace(/\D/g, "")}?text=${encodeURIComponent(
-          `Hi${currentUserRole === "provider" ? " " + (conversation?.customerName || "") : ""}, I'm reaching out regarding "${conversation?.listingName || "NagpurNest"}" listed on NagpurNest.`
+          `Hi${currentUserRole === "provider" ? " " + (conversation?.customerName || "") : ""}, I'm reaching out regarding "${conversation?.listingName || "StayNest"}" listed on StayNest.`
         )}`
       : null;
 

@@ -2,7 +2,7 @@ import jwt, { SignOptions } from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { NextRequest } from "next/server";
 
-const JWT_SECRET = process.env.JWT_SECRET || "nagpurnest-dev-secret";
+const JWT_SECRET = process.env.JWT_SECRET || "staynest-dev-secret";
 const JWT_EXPIRES_IN = (process.env.JWT_EXPIRES_IN ||
   "7d") as SignOptions["expiresIn"];
 

@@ -135,7 +135,7 @@ export default function Navbar() {
               <MapPin className="w-4 h-4 text-white" strokeWidth={2.5} />
             </div>
             <span className="font-heading text-xl font-bold text-gray-900 dark:text-white tracking-tight">
-              Nagpur<span className="text-primary-500">Nest</span>
+              Stay<span className="text-primary-500">Nest</span>
             </span>
           </Link>
 
@@ -145,7 +145,7 @@ export default function Navbar() {
               { href: "/stays", label: "Find a Stay" },
               { href: "/tiffins", label: "Find Tiffin" },
               { href: "/areas", label: "Explore Areas" },
-              { href: "/new-to-nagpur", label: "New to Nagpur?" },
+              { href: "/new-to-nagpur", label: "New to the City?" },
             ].map((link) => {
               const isActive =
                 pathname === link.href ||
@@ -417,7 +417,7 @@ export default function Navbar() {
               className="px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl"
               onClick={() => setMobileOpen(false)}
             >
-              ✨ New to Nagpur?
+              ✨ New to the City?
             </Link>
 
             {!isProvider && !isAdmin && (
