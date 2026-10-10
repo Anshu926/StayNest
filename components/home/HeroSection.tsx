@@ -19,7 +19,7 @@ const AREA_SLUGS: Record<string, string> = {
 
 export default function HeroSection() {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState<"stay" | "tiffin">("stay");
+  const [activeTab, setActiveTab] = useState<"stay" | "tiffin" | "study">("stay");
 
   // Stay form state
   const [stayArea, setStayArea] = useState("");
@@ -106,6 +106,16 @@ export default function HeroSection() {
               onClick={() => setActiveTab("tiffin")}
             >
               🍱 Find Tiffin
+            </button>
+            <button
+              className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all ${
+                activeTab === "study"
+                  ? "bg-white dark:bg-slate-900 text-gray-900 dark:text-white shadow-sm border border-gray-100 dark:border-slate-700"
+                  : "text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white"
+              }`}
+              onClick={() => setActiveTab("study")}
+            >
+              📚 Study Space
             </button>
           </div>
 
@@ -253,6 +263,64 @@ export default function HeroSection() {
               </button>
             </div>
           )}
+
+          {/* Study Space form */}
+          {activeTab === "study" && (
+            <div className="p-2 sm:p-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-4">
+                <div>
+                  <label className="block text-xs font-semibold text-gray-600 dark:text-slate-400 mb-1.5">
+                    Select Area / Locality
+                  </label>
+                  <select
+                    className="input-field"
+                    onChange={(e) => router.push(`/study-spaces?area=${e.target.value}`)}
+                  >
+                    <option value="">Any Area</option>
+                    {NAGPUR_AREAS.map((a) => (
+                      <option key={a} value={AREA_SLUGS[a]}>{a}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-600 dark:text-slate-400 mb-1.5">
+                    Space Type
+                  </label>
+                  <select
+                    className="input-field"
+                    onChange={(e) => router.push(`/study-spaces?spaceType=${e.target.value}`)}
+                  >
+                    <option value="">All Types</option>
+                    <option value="library">📚 Library</option>
+                    <option value="cafe">☕ Study Café</option>
+                    <option value="coworking">🖥️ Coworking</option>
+                    <option value="private-room">🚪 Private Room</option>
+                    <option value="study-hall">🏛️ Study Hall</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-600 dark:text-slate-400 mb-1.5">
+                    I am a
+                  </label>
+                  <select
+                    className="input-field"
+                    onChange={(e) => router.push(`/study-spaces?targetAudience=${e.target.value}`)}
+                  >
+                    <option value="">Student / Professional</option>
+                    <option value="student">Student</option>
+                    <option value="professional">Working Professional</option>
+                  </select>
+                </div>
+              </div>
+              <button
+                onClick={() => router.push("/study-spaces")}
+                className="btn-primary w-full py-3 text-base flex items-center justify-center gap-2 font-semibold"
+              >
+                <Search className="w-4 h-4" />
+                Find Study Spaces
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Quick stats */}
@@ -260,7 +328,7 @@ export default function HeroSection() {
           {[
             { label: "Verified Stays", value: "15+", icon: "🏠" },
             { label: "Tiffin Services", value: "10+", icon: "🍱" },
-            { label: "Areas Covered", value: "12+", icon: "🗺️" },
+            { label: "Study Spaces", value: "8+", icon: "📚" },
             { label: "Verified Providers", value: "100%", icon: "✅" },
           ].map((stat) => (
             <div

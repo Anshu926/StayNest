@@ -144,7 +144,7 @@ export default function Navbar() {
             {[
               { href: "/stays", label: "Find a Stay" },
               { href: "/tiffins", label: "Find Tiffin" },
-              { href: "/areas", label: "Explore Areas" },
+              { href: "/study-spaces", label: "Study Spaces" },
               { href: "/new-to-nagpur", label: "New to the City?" },
             ].map((link) => {
               const isActive =
@@ -406,11 +406,11 @@ export default function Navbar() {
               🍱 Find Tiffin
             </Link>
             <Link
-              href="/areas"
+              href="/study-spaces"
               className="px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl"
               onClick={() => setMobileOpen(false)}
             >
-              🗺️ Explore Areas
+              📚 Study Spaces
             </Link>
             <Link
               href="/new-to-nagpur"
