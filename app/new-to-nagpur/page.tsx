@@ -5,14 +5,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "New to the City? Your Complete Guide | StayNest",
-  description: "A complete guide for newcomers in Nagpur — find accommodation, home food, explore areas, and discover everything you need to settle in faster.",
+  description: "A complete guide for newcomers — find accommodation, home food, quiet study spaces, and discover everything you need to settle in comfortably.",
 };
 
 const guides = [
   {
     emoji: "🏠",
     title: "Finding a PG or Room",
-    description: "Tips on choosing the right PG in Nagpur based on your budget, area, and lifestyle. Know what to check before signing the agreement.",
+    description: "Tips on choosing the right PG or flat based on your budget, area, and lifestyle. Know what to check before signing the agreement.",
     steps: [
       "Decide your preferred area based on your college or office location",
       "Set a realistic budget (₹4,000–₹15,000 for most PGs)",
@@ -25,28 +25,28 @@ const guides = [
   {
     emoji: "🍱",
     title: "Getting Home Food / Tiffin",
-    description: "Tiffin services are the most affordable and convenient way to get home-cooked meals in Nagpur. Here's how to choose the right one.",
+    description: "Tiffin services are the most affordable and convenient way to get fresh, hygienic home-cooked meals every day.",
     steps: [
       "Look for services that deliver to your area",
       "Check if they offer trial meals before subscribing",
-      "Confirm food type (Veg / Non-Veg / Jain)",
-      "Ask about monthly rates and cancellation policy",
+      "Confirm food type (Pure Veg / Non-Veg / Jain)",
+      "Ask about monthly rates and weekend delivery options",
       "Check reviews and hygiene before subscribing",
     ],
     cta: { label: "Find Tiffin Services", href: "/tiffins" },
   },
   {
-    emoji: "🗺️",
-    title: "Understanding Nagpur's Areas",
-    description: "Nagpur is spread across multiple zones. Knowing which area suits your needs will save you a lot of time and commuting hassle.",
+    emoji: "📚",
+    title: "Finding Quiet Study Spaces",
+    description: "Whether you're preparing for competitive exams, attending online lectures, or doing focused work, here's how to pick the best study space.",
     steps: [
-      "Students: Laxmi Nagar, Manish Nagar, Dharampeth",
-      "IT/Corporate: Wardha Road, MIHAN, Civil Lines",
-      "Budget stays: Hingna, Bajaj Nagar, Pratap Nagar",
-      "Central & well-connected: Sadar, Sitabuldi",
-      "Premium residential: Dharampeth, Civil Lines",
+      "Choose based on noise requirement (Silent, Quiet, or Moderate)",
+      "Verify essential amenities: high-speed Wi-Fi, power outlets, AC",
+      "Look for flexible access: hourly passes, daily desks, or monthly cabins",
+      "Check for 24/7 access if you prefer night study hours",
+      "Inspect locker and printing availability for study materials",
     ],
-    cta: { label: "Explore All Areas", href: "/areas" },
+    cta: { label: "Browse Study Spaces", href: "/study-spaces" },
   },
 ];
 

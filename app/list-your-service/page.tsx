@@ -5,15 +5,15 @@ import { Building2, UtensilsCrossed, Home, Bed, ChevronRight } from "lucide-reac
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "List Your PG, Room or Tiffin Service | StayNest",
-  description: "List your PG, flat, hostel or tiffin service on StayNest and connect with thousands of newcomers in Nagpur looking for accommodation and home food.",
+  title: "List Your PG, Room, Tiffin or Study Space | StayNest",
+  description: "List your PG, flat, tiffin service, or study space on StayNest and connect with thousands of students and working professionals.",
 };
 
 const listingTypes = [
   { icon: Building2, title: "PG Accommodation", description: "List your paying guest accommodation with all amenities.", type: "pg" },
-  { icon: Home, title: "Flat / Apartment", description: "Rent out your flat or apartment to newcomers.", type: "flat" },
-  { icon: Bed, title: "Hostel", description: "List your hostel with dorm or private room options.", type: "hostel" },
-  { icon: UtensilsCrossed, title: "Tiffin / Home Food", description: "Offer your home-cooked meals and tiffin service.", type: "tiffin" },
+  { icon: Home, title: "Flat / Apartment", description: "Rent out your flat or apartment to tenants.", type: "flat" },
+  { icon: UtensilsCrossed, title: "Tiffin / Home Food", description: "Offer your home-cooked meals and tiffin delivery service.", type: "tiffin" },
+  { icon: Bed, title: "Study Space / Library", description: "List your reading room, library, or coworking space.", type: "study-space" },
 ];
 
 export default function ListYourServicePage() {
@@ -26,7 +26,7 @@ export default function ListYourServicePage() {
           List Your Service on StayNest
         </h1>
         <p className="text-gray-600 dark:text-slate-400 text-base sm:text-lg max-w-xl mx-auto">
-          Reach thousands of newcomers in Nagpur who are actively looking for accommodation and home food. It's free to get started.
+          Reach thousands of newcomers who are actively looking for accommodation, home food, and study spaces. It's free to get started.
         </p>
       </div>
 

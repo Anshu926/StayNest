@@ -16,15 +16,18 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: {
-    default: "StayNest — Accommodation and Meal Booking Platform",
+    default: "StayNest — Accommodation, Meal & Study Spaces Platform",
     template: "%s | StayNest",
   },
   description:
-    "StayNest is your trusted accommodation and meal booking platform. Discover verified PGs, rental rooms, flats, and home-cooked meal services effortlessly.",
+    "StayNest is your trusted platform for accommodation, home-cooked meal subscriptions, and quiet study spaces. Discover verified PGs, rental rooms, flats, tiffin deliveries, and libraries effortlessly.",
   keywords: [
     "PG booking",
     "rooms for rent",
     "tiffin service",
+    "study rooms",
+    "libraries and study halls",
+    "coworking spaces",
     "accommodation booking platform",
     "rental flats",
     "student hostels",
@@ -32,8 +35,8 @@ export const metadata: Metadata = {
     "StayNest",
   ],
   openGraph: {
-    title: "StayNest — Accommodation and Meal Booking Platform",
-    description: "Discover verified PGs, rental rooms, flats, and home-cooked meal services effortlessly.",
+    title: "StayNest — Accommodation, Meal & Study Spaces Platform",
+    description: "Discover verified PGs, rental rooms, flats, home-cooked meal services, and quiet study spaces effortlessly.",
     type: "website",
     locale: "en_IN",
   },

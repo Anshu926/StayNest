@@ -64,7 +64,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-primary-200/60 dark:border-primary-900/60 text-primary-700 dark:text-primary-400 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-primary-500 animate-ping" />
             <MapPin className="w-3.5 h-3.5 text-primary-500" />
-            Accommodation and Meal Booking Platform
+            Accommodation, Meal & Study Spaces Platform
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-5 tracking-tight leading-[1.15]">
@@ -74,12 +74,12 @@ export default function HeroSection() {
           <p className="text-xl sm:text-2xl text-gray-700 dark:text-slate-200 font-medium mb-3">
             Find your stay. Find your food.{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-600 font-semibold">
-              Settle in faster.
+              Find study spaces.
             </span>
           </p>
 
           <p className="text-sm sm:text-base text-gray-500 dark:text-slate-400 max-w-xl mx-auto">
-            Discover verified PGs, rooms, flats, and home-cooked meal services — crafted for students and working professionals.
+            Discover verified PGs, flats, home-cooked tiffins, and quiet study rooms — everything students and professionals need to thrive.
           </p>
         </div>
 

@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
-import PopularAreas from "@/components/home/PopularAreas";
+import PopularStudySpaces from "@/components/home/PopularStudySpaces";
 import PopularStays from "@/components/home/PopularStays";
 import PopularTiffins from "@/components/home/PopularTiffins";
 import NewToNagpur from "@/components/home/NewToNagpur";
@@ -10,9 +10,9 @@ import ListYourService from "@/components/home/ListYourService";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "StayNest — Accommodation and Meal Booking Platform",
+  title: "StayNest — Accommodation, Meal & Study Spaces Platform",
   description:
-    "Find trusted PGs, rental rooms, flats, and home-cooked meal services. Perfect for students and working professionals.",
+    "Find trusted PGs, rental rooms, flats, home-cooked meal services, and quiet study spaces. Perfect for students and working professionals.",
 };
 
 export default function HomePage() {
@@ -23,7 +23,7 @@ export default function HomePage() {
       <HeroSection />
 
       <Suspense fallback={<SectionSkeleton />}>
-        <PopularAreas />
+        <PopularStudySpaces />
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>

@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const services = [
-  { icon: "🏠", title: "Find a Place to Stay", description: "PGs, rooms, flats and hostels across Nagpur", href: "/stays", available: true },
-  { icon: "🍱", title: "Find Home Food", description: "Fresh tiffin and home-cooked meal services", href: "/tiffins", available: true },
-  { icon: "🗺️", title: "Explore Localities", description: "Discover the best neighbourhoods for you", href: "/areas", available: true },
+  { icon: "🏠", title: "Find a Place to Stay", description: "PGs, rooms, flats and hostels across the city", href: "/stays", available: true },
+  { icon: "🍱", title: "Find Home Food", description: "Fresh tiffin and home-cooked meal subscriptions", href: "/tiffins", available: true },
+  { icon: "📚", title: "Study Rooms & Spaces", description: "Quiet libraries, coworking spots & study halls", href: "/study-spaces", available: true },
   { icon: "🧺", title: "Find Local Services", description: "Maid, cleaning and household services", href: "#", available: false },
   { icon: "🚚", title: "Moving Help", description: "Packers, movers and relocation services", href: "#", available: false },
   { icon: "📶", title: "Internet / Wi-Fi", description: "Broadband providers near you", href: "#", available: false },

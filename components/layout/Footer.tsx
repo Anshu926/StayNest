@@ -30,15 +30,15 @@ export default function Footer() {
           {/* Find */}
           <div>
             <h3 className="text-white font-bold mb-4 text-xs uppercase tracking-wider">
-              Find Accommodation & Food
+              Find Services
             </h3>
             <ul className="space-y-2.5 text-sm">
               {[
                 { label: "Verified PGs", href: "/stays?propertyType=pg" },
                 { label: "Single & Shared Rooms", href: "/stays?propertyType=single-room" },
                 { label: "Rental Flats", href: "/stays?propertyType=flat" },
-                { label: "Student Hostels", href: "/stays?propertyType=hostel" },
                 { label: "Daily Meal & Tiffins", href: "/tiffins" },
+                { label: "Study Rooms & Spaces", href: "/study-spaces" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:text-primary-400 transition-colors">
@@ -49,19 +49,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Popular Areas */}
+          {/* Study Spaces & Types */}
           <div>
             <h3 className="text-white font-bold mb-4 text-xs uppercase tracking-wider">
-              Popular Localities
+              Study Spaces
             </h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { label: "Manish Nagar", href: "/areas/manish-nagar" },
-                { label: "Dharampeth", href: "/areas/dharampeth" },
-                { label: "Wardha Road", href: "/areas/wardha-road" },
-                { label: "MIHAN Tech Zone", href: "/areas/mihan" },
-                { label: "Laxmi Nagar", href: "/areas/laxmi-nagar" },
-                { label: "Sadar", href: "/areas/sadar" },
+                { label: "Public & Private Libraries", href: "/study-spaces?spaceType=library" },
+                { label: "24/7 Coworking Hubs", href: "/study-spaces?spaceType=coworking" },
+                { label: "Silent Study Halls", href: "/study-spaces?noiseLevel=silent" },
+                { label: "Private Study Cabins", href: "/study-spaces?spaceType=private-room" },
+                { label: "Study Cafés", href: "/study-spaces?spaceType=cafe" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:text-primary-400 transition-colors">
@@ -75,12 +74,13 @@ export default function Footer() {
           {/* Providers & Contact */}
           <div>
             <h3 className="text-white font-bold mb-4 text-xs uppercase tracking-wider">
-              For Property & Food Owners
+              For Service Providers
             </h3>
             <ul className="space-y-2.5 text-sm mb-6">
               {[
                 { label: "List PG / Room", href: "/list-your-service" },
                 { label: "List Tiffin Delivery", href: "/list-your-service" },
+                { label: "List Study Space", href: "/list-your-service" },
                 { label: "Provider Dashboard", href: "/provider/dashboard" },
               ].map((item) => (
                 <li key={item.label}>
@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-900 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} StayNest. Accommodation and Meal Booking Platform.
+            © {new Date().getFullYear()} StayNest. Accommodation, Meal & Study Spaces Platform.
           </p>
           <div className="flex gap-6 text-xs text-slate-500">
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">

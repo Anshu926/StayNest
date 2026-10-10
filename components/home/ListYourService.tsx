@@ -15,10 +15,10 @@ export default function ListYourService() {
               🚀 For Owners & Providers
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-              Have a PG, Room,<br />or Tiffin Service?
+              Have a PG, Tiffin, or<br />Study Space?
             </h2>
             <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
-              List your property or food delivery on StayNest. Connect directly with students and professionals moving to Nagpur every single day.
+              List your property, food service, or study space on StayNest. Connect directly with students and professionals moving to the city every single day.
             </p>
             <div className="flex flex-col sm:flex-row gap-3.5">
               <Link
@@ -37,25 +37,25 @@ export default function ListYourService() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { icon: Building2, title: "PG / Room", desc: "List single, double, or full-room accommodations" },
-              { icon: Home, title: "Flat / Hostel", desc: "List flats and hostels for student/corporate tenants" },
-              { icon: UtensilsCrossed, title: "Tiffin Service", desc: "Connect with subscribers needing fresh daily meals" },
-            ].map((item) => (
-              <Link
-                key={item.title}
-                href="/list-your-service"
-                className="bg-slate-900/80 backdrop-blur-sm rounded-2xl p-5 text-center hover:bg-slate-800/90 transition-all group border border-slate-800 hover:border-primary-500/60 hover:-translate-y-1 shadow-lg"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-primary-500/20 transition-all">
-                  <item.icon className="w-6 h-6 text-primary-400" />
-                </div>
-                <h3 className="text-white font-bold text-sm mb-1.5">{item.title}</h3>
-                <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
-              </Link>
-            ))}
-          </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { icon: Building2, title: "PG / Room", desc: "List single, double, or full-room accommodations" },
+                { icon: UtensilsCrossed, title: "Tiffin Service", desc: "Connect with subscribers needing fresh daily meals" },
+                { icon: Home, title: "Study Space", desc: "List libraries, silent cabins, or coworking spaces" },
+              ].map((item) => (
+                <Link
+                  key={item.title}
+                  href="/list-your-service"
+                  className="bg-slate-900/80 backdrop-blur-sm rounded-2xl p-5 text-center hover:bg-slate-800/90 transition-all group border border-slate-800 hover:border-primary-500/60 hover:-translate-y-1 shadow-lg"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-primary-500/20 transition-all">
+                    <item.icon className="w-6 h-6 text-primary-400" />
+                  </div>
+                  <h3 className="text-white font-bold text-sm mb-1.5">{item.title}</h3>
+                  <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
+                </Link>
+              ))}
+            </div>
         </div>
       </div>
     </section>
